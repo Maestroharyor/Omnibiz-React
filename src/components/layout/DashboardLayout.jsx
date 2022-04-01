@@ -45,14 +45,14 @@ function DashboardLayout(props) {
         <div className="header">
           <Link to={"/"}><h1>OMNIBIZ</h1></Link>
           
-          <button className="menu" onClick={() => setShowNav(true)}>
+          <button className="menu" onClick={() => setShowNav(true)} title="Open Menu" aria-label="Open Menu">
             <MdMenu />
           </button>
         </div>
 
         {showNav && (
           <ul>
-            <button className="menu_close" onClick={() => setShowNav(false)}>
+            <button className="menu_close" onClick={() => setShowNav(false)} title="Close Menu" aria-label="Close Menu">
               <MdClose />
             </button>
             <li>
