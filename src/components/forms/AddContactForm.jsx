@@ -52,7 +52,8 @@ function AddContactForm() {
         clearAddressesField();
       }
     } else {
-      setAddressesError("You can't have more than 5 addresses");
+      alert("You can't have more than 5 addresses");
+      clearAddressesField()
     }
   };
 

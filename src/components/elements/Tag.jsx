@@ -8,7 +8,7 @@ function Tag({ addresses, setAddreses }) {
   return (
     <div className="tags_container">
       {addresses.map((address, index) => (
-        <div key={`${address}-index`} className="tag">
+        <div key={`${address}-${index}`} className="tag">
           <span className="tag_content">{address}</span>
           <span
             onClick={(e) =>
