@@ -13,6 +13,7 @@ function DashboardLayout(props) {
   const location = useLocation();
   const large = window.matchMedia("(min-width: 768px)");
 
+  // Handle Responsiveness Function
   const handleResponsive = () => {
     if (large.matches) {
       // console.log("Desktop")

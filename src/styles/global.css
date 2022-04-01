@@ -19,6 +19,14 @@ body {
   font-family: "KoHo", sans-serif;
 }
 
+.required, .form_error{
+  color: rgb(199, 40, 40);
+}
+
+.form_error{
+  margin-top: 5px;
+}
+
 #sidebar {
   background-color: var(--primary-color-2);
   padding: 0.6rem 2.5rem;
@@ -170,6 +178,13 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.add_contact .form_control input:disabled {
+  background-color: #ebf4f2d0;
+}
+.add_contact .form_control input:disabled:hover {
+  cursor: not-allowed;
+}
+
 .add_contact .form_submit {
   width: 100%;
 }
@@ -196,11 +211,27 @@ body {
   background-image: linear-gradient(to right, #9b06ff, #eb0dff);
 }
 
+.phone_form_control{
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone_form_control span{
+  font-size: 1.3rem;
+  color: var(--accent-color-2);
+}
+
+.phone_form_control input{
+  flex: 1;
+}
+
 /* Tag */
 .tags_container{
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
 }
@@ -226,6 +257,112 @@ body {
 .tags_container .tag .close:hover{
     cursor: pointer;
 }
+
+/* Contact Details View */
+.no_contact_added{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  padding: 6rem 0rem;
+}
+
+.no_contact_added h3{
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.no_contact_added a{
+  color: var(--accent-color-lighter);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease-in-out;
+}
+.no_contact_added a:hover{
+  color: var(--primary-color);
+}
+
+.contact_added_view .buttons_options{
+  display: flex;
+  align-items: center;
+  margin: 10px 0 20px 0;
+}
+.contact_added_view button{
+  background-color: var(--primary-color-2);
+  border: none;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact_added_view button:hover, .contact_added_view button.active{
+  cursor: pointer;
+  color: #fff;
+}
+.contact_added_view button:hover{
+  background-color: #ddd3cb;
+
+}
+.contact_added_view button.active{
+  background-color: var(--primary-color);
+}
+.contact_added_view button.table{
+  border-radius: 10px 0 0 10px;
+}
+.contact_added_view button.map{
+  border-radius: 0 10px 10px 0;
+}
+
+.view_container{
+  overflow-y: scroll;
+  overflow: auto;
+}
+
+table.table_view{
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+table.table_view, table.table_view td, table.table_view th{
+  border: 1px solid #cad1cf;
+  padding: 8px 15px;
+}
+
+table.table_view th{
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.add_table_view_link{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.add_table_view_link a{
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.add_table_view_link a:hover{
+  background-color: #eb0dff;
+}
+
+
 
 /* Small devices (landscape phones, 640px and up) */
 @media (min-width: 640px) {
@@ -319,6 +456,25 @@ body {
   }
   .add_contact h2 {
     font-size: 3rem;
+  }
+
+  .no_contact_added{
+    padding: 15rem 0rem;
+  }
+
+  .no_contact_added h3{
+    font-size: 3rem;
+  }
+
+  .no_contact_added a{
+    font-size: 1.5rem;
+  }
+  table.table_view, table.table_view td, table.table_view th{
+    padding: 12px 15px;
+  }
+  
+  table.table_view th{
+    font-size: 1.5rem;
   }
 }
 
