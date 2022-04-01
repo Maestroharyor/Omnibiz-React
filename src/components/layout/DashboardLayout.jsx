@@ -23,7 +23,6 @@ function DashboardLayout(props) {
   };
 
   useEffect(() => {
-    handleResponsive();
     window.addEventListener("resize", handleResponsive, true);
 
     return () => {
@@ -35,6 +34,8 @@ function DashboardLayout(props) {
   useEffect(() => {
     setShowNav(false);
   }, [location]);
+
+  console.log(showNav)
 
   return (
     <div id="dashboard">
