@@ -32,7 +32,9 @@ function DashboardLayout(props) {
 
 
   useEffect(() => {
-    setShowNav(false);
+    if(!large.matches){
+      setShowNav(false);
+    }
   }, [location]);
 
   console.log(showNav)
