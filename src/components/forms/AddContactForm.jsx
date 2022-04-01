@@ -29,8 +29,8 @@ function AddContactForm() {
 
   // Generate Randome Longitude and Latitude
   useEffect(() => {
-    setLatitude(getRandomLocation(-180, 180, 3));
-    setLongitude(getRandomLocation(-180, 180, 3));
+    setLatitude(getRandomLocation(20, 70));
+    setLongitude(getRandomLocation(-110, -100));
   }, []);
 
   // DOM Manipulation to clear address field

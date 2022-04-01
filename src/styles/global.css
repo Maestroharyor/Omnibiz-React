@@ -46,6 +46,10 @@ body {
   color: var(--primary-color);
 }
 
+#sidebar a{
+  text-decoration: none;
+}
+
 #sidebar button.menu {
   background-color: none;
   font-size: 2rem;
@@ -71,7 +75,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255);
   top: 0;
   left: 0;
   display: flex;
@@ -321,9 +325,17 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
-.view_container{
+.table_view_container{
   overflow-y: scroll;
   overflow: auto;
+  padding-bottom: 20px;
+}
+
+.view_snippet{
+  color: var(--accent-color-lighter);
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 table.table_view{
@@ -462,7 +474,7 @@ table.table_view th{
     padding: 15rem 0rem;
   }
 
-  .no_contact_added h3{
+  .no_contact_added h1{
     font-size: 3rem;
   }
 

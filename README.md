@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Omnibiz React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The features and functionalities are as stated in the document.
 
-## Available Scripts
+## Folder/File Structure
 
-In the project directory, you can run:
+The project follows the standard structure of a react project except with the addition of four new folders in the __SRC__ directory:
+* __COMPONENTS:__ This contains all the components used (with 3 subfolders): 
+  * __ELEMENTS__
+  * __FORMS__
+  * __LAYOUTS__
+* __CONTEXT:__ This contains the context states used in the project.
+* __FUNCTIONS:__ This contains any JavaScript function used in project.
+* __STYLES:__ Stylesheet directory for the project.
 
-### `npm start`
+## CSS Styling
+The project was styled using regular CSS files located in the __STYLES__ folder in the __SRC__ directory.
+The approach followed is a mobile-first responsive design with the following breakpoints:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```css
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+/* Small devices (landscape phones, 640px and up) */
+@media (min-width: 640px) {
+}
 
-### `npm test`
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+}
 
-### `npm run build`
+/* XL-Large devices (large desktops, 1280px and up) */
+@media (min-width: 1280px) {
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+/* 2XL -Large devices (larger desktops, 1536px and up) */
+@media (min-width: 1536px) {
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Link to Project
+[Omnibiz React](https://omnibiz-react.vercel.app/)

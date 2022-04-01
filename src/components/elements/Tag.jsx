@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function Tag({ addresses, setAddreses }) {
   const handleAddressFilter = (clickedAddress) => {
     const newArray = addresses.filter(

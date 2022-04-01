@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import {
   MdHome,
-  MdHomeFilled,
   MdContacts,
   MdMenu,
   MdClose
@@ -44,7 +43,8 @@ function DashboardLayout(props) {
     <div id="dashboard">
       <nav id="sidebar">
         <div className="header">
-          <h1>OMNIBIZ</h1>
+          <Link to={"/"}><h1>OMNIBIZ</h1></Link>
+          
           <button className="menu" onClick={() => setShowNav(true)}>
             <MdMenu />
           </button>
@@ -56,7 +56,7 @@ function DashboardLayout(props) {
               <MdClose />
             </button>
             <li>
-              <NavLink to="/" activeClassName="active">
+              <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')} >
                 <div className="icon">
                   <MdHome />
                 </div>
@@ -65,7 +65,7 @@ function DashboardLayout(props) {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/add-contact" activeClassName="active">
+              <NavLink to="/add-contact" className={({ isActive }) => (isActive ? 'active' : '')}>
                 <div className="icon">
                   <MdContacts />
                 </div>
