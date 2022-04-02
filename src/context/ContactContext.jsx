@@ -13,13 +13,6 @@ export const ContactProvider = (props) => {
     localStorage.setItem("omnibiz-contact", JSON.stringify(contacts));
   }, [contacts]);
 
-  // useEffect(() => {
-  //   const savedData = JSON.parse(localStorage.getItem("omnibiz-contact"));
-  //   if (savedData !== null) {
-  //     setContacts(savedData);
-  //   }
-  // }, []);
-
   return (
     <ContactContext.Provider value={[contacts, setContacts]}>
       {props.children}
