@@ -15,7 +15,6 @@ function DashboardLayout(props) {
   // Handle Responsiveness Function
   const handleResponsive = () => {
     if (large.matches) {
-      // console.log("Desktop")
       setShowNav(true);
     } else{
       setShowNav(false)
@@ -37,7 +36,6 @@ function DashboardLayout(props) {
     }
   }, [location]);
 
-  console.log(showNav)
 
   return (
     <div id="dashboard">

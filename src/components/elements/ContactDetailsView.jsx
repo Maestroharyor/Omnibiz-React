@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react';
+import {useState, useEffect, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {MdContacts,MdTableChart, MdMap} from "react-icons/md"
 import { ContactContext } from "../../context/ContactContext";
@@ -8,7 +8,11 @@ import MapView from './MapView';
 function ContactDetailsView() {
     const [tableView, setTableView] = useState(true);
     const [contacts, setContacts] = useContext(ContactContext);
-    console.log(contacts)
+
+    useEffect(()=> {
+        const savedData = JSON.parse(localStorage.getItem('omnibiz-contact'));
+        setContacts(savedData)
+      }, [])
 
   return (
     <>{
