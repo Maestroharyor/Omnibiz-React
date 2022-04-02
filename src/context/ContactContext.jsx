@@ -6,7 +6,7 @@ export const ContactProvider = (props) => {
   const [contacts, setContacts] = useState(() => {
     // getting stored value
     const savedData = JSON.parse(localStorage.getItem("omnibiz-contact"));
-    return savedData || "";
+    return savedData || [];
   });
 
   useEffect(() => {
