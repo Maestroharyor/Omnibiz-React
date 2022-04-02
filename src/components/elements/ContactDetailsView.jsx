@@ -9,13 +9,6 @@ function ContactDetailsView() {
     const [tableView, setTableView] = useState(true);
     const [contacts, setContacts] = useContext(ContactContext);
 
-    useEffect(()=> {
-        const savedData = JSON.parse(localStorage.getItem('omnibiz-contact'));
-        if(savedData !== null){
-            setContacts(savedData)
-        }
-      }, [])
-
   return (
     <>{
         !contacts.length > 0 ?
