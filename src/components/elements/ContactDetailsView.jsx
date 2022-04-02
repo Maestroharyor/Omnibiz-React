@@ -11,7 +11,9 @@ function ContactDetailsView() {
 
     useEffect(()=> {
         const savedData = JSON.parse(localStorage.getItem('omnibiz-contact'));
-        setContacts(savedData)
+        if(savedData !== null){
+            setContacts(savedData)
+        }
       }, [])
 
   return (
